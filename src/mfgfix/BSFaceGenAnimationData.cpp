@@ -116,8 +116,8 @@ namespace MfgFix
 			REL::Relocation<void(void*)> ReleaseDialogueData{ REL::ID(16318) };
 			ReleaseDialogueData(dialogueData);
 		} else if (REL::Module::IsVR()) {
-			uint64_t release_singleton=*(uint64_t*)REL::Offset(0x318c5b8).address();
-			REL::Relocation<void(uint64_t, void*)> ReleaseDialogueData{REL::Offset(0xf23ce0)};
+			uint64_t release_singleton=*(uint64_t*)REL::Offset(0x2f896e0).address();
+			REL::Relocation<void(uint64_t, void*)> ReleaseDialogueData{REL::Offset(0x205550)};
 			ReleaseDialogueData(release_singleton+0xd0,dialogueData);
 		} else {
 			REL::Relocation<void(void*, void*)> ReleaseDialogueData{ REL::ID(16077) };
